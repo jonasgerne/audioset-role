@@ -1,0 +1,6 @@
+spectrogram_images/
+spectrogram_jpg/
+wav_files/
+.venv/
+spectrograms.zip
+saved_models/
