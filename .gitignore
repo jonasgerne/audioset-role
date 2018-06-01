@@ -5,3 +5,4 @@ wav_files/
 spectrograms.zip
 saved_models/
 .ipynb_checkpoints/
+*.pdf
