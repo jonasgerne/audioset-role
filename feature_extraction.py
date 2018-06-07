@@ -86,4 +86,4 @@ for f in tqdm(wav_files):
     df = df.append(pd.DataFrame(feature_list, index=col_names).transpose(), ignore_index=True)
 
 # Save file
-df.to_csv('df_features.csv', index=False)
+df.to_csv('extracted_features/df_features.csv', index=False)
