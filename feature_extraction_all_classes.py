@@ -18,8 +18,8 @@ col_names = ['file_name', 'signal_mean', 'signal_std', 'signal_skew', 'signal_ku
             ['spectral_contrast_' + str(i+1) + '_mean' for i in range(7)] + \
             ['spectral_contrast_' + str(i+1) + '_std' for i in range(7)] + \
             ['spectral_rolloff_mean', 'spectral_rolloff_std'] + \
-            ['mfccs_' + str(i+1) + '_mean' for i in range(20)] + \
-            ['mfccs_' + str(i+1) + '_std' for i in range(20)] + \
+            ['mfccs_' + str(i+1) + '_mean' for i in range(7)] + \
+            ['mfccs_' + str(i+1) + '_std' for i in range(7)] + \
             ['chroma_stft_' + str(i+1) + '_mean' for i in range(12)] + \
             ['chroma_stft_' + str(i+1) + '_std' for i in range(12)] 
             
@@ -70,7 +70,7 @@ for f in tqdm(wav_files):
         feature_list.append(np.mean(spectral_rolloff))
         feature_list.append(np.std(spectral_rolloff))
 
-        mfccs = librosa.feature.mfcc(y, sr=sr, n_mfcc=20)
+        mfccs = librosa.feature.mfcc(y, sr=sr, n_mfcc=7)
         feature_list.extend(np.mean(mfccs, axis=1))
         feature_list.extend(np.std(mfccs, axis=1))
 
@@ -86,4 +86,4 @@ for f in tqdm(wav_files):
     df = df.append(pd.DataFrame(feature_list, index=col_names).transpose(), ignore_index=True)
 
 # Save file
-df.to_csv('extracted_features/df_features.csv', index=False)
+df.to_csv('extracted_features/df_features_mfcc7_all_classes.csv', index=False)
