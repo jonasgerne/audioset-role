@@ -6,3 +6,4 @@ spectrograms.zip
 saved_models/
 .ipynb_checkpoints/
 *.pdf
+.idea/
