@@ -28,3 +28,6 @@ Pillow==4.1.1
 1. Extract the so-called hand-crafted features by running ```4.2 feature_extraction and visualization.ipynb```. 
 1. Train and evaluate Feature-Engineering based model by running ```4.3_feature_based_classification.ipynb```. SVM gives the best result.
 1. Evaluate the ensemble of the best models by running ```5_model_ensemble.ipynb```.
+
+
+**Note.** Data is transfered between the .ipynb using files. All the needed files for the best performed models already exist in the repository. Thus modules can be run independently from each other using those files. However, this doesn't apply to the parts that work directly with audiofiles (plotting spectrograms, feature extraction): the raw audiofiles are not included in the repo since it's too big, and needs to be retrieves using audio_retrieval module.
