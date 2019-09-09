@@ -8,16 +8,16 @@ Project uses Jupyter Notebook, so you probably want to install Anaconds: https:/
 
 ### Other requirements:
 
-tensorflow-gpu==1.8.0
-Keras==2.0.8
-numpy==1.12.1
-pandas==0.22.0
-youtube-dl==2018.2.4
-scipy==0.19.0
-librosa==0.5.1
-tqdm==4.19.1
-scipy==0.19.0
-Pillow==4.1.1
+tensorflow-gpu==1.8.0  
+Keras==2.0.8  
+numpy==1.12.1  
+pandas==0.22.0  
+youtube-dl==2018.2.4  
+scipy==0.19.0  
+librosa==0.5.1  
+tqdm==4.19.1  
+scipy==0.19.0  
+Pillow==4.1.1  
 
 ## Running the model
 
